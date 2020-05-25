@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './core/auth.guard';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
+import { FormlyComponent } from './formly/formly.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./login/login.module').then(m => m.LoginModule)
+  },
+  {
+    path: 'formly',
+    component: FormlyComponent
   },
   {
     path: '**',
